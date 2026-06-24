@@ -9,5 +9,4 @@ class Item:
     qtd: int = 1
 
     def subtotal(self) -> float:
-        # TODO: retornar preço × quantidade
-        ...
+        return self.preco * self.qtd
