@@ -13,4 +13,5 @@ class ServicoNewsletter:
 
     def enviar_edicao(self, texto):
         for a in self.repo.listar():
-            self.email.enviar(a.email, texto)
+            if a.pode_receber():               # so envia a quem esta ativo
+                self.email.enviar(a.email, texto)
