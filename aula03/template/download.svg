@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676.5999999999999 356" width="676.5999999999999" height="356" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="cls-inherit" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto-start-reverse">
+    <polygon points="0 0, 12 5, 0 10" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+  <marker id="cls-composition" markerWidth="12" markerHeight="10" refX="0" refY="5" orient="auto-start-reverse">
+    <polygon points="6 0, 12 5, 6 10, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="1" />
+  </marker>
+  <marker id="cls-aggregation" markerWidth="12" markerHeight="10" refX="0" refY="5" orient="auto-start-reverse">
+    <polygon points="6 0, 12 5, 6 10, 0 5" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+  <marker id="cls-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto-start-reverse">
+    <polyline points="0 0, 8 3, 0 6" fill="none" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+</defs>
+<polyline class="class-relationship" data-from="AcademiaService" data-to="Aluno" data-type="dependency" data-marker-at="to" points="198.85,128 198.85,148 368,148 368,188" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" />
+<polyline class="class-relationship" data-from="AcademiaService" data-to="AlunoRepo" data-type="dependency" data-marker-at="to" points="244.1,128 244.1,138 552.6999999999999,138 552.6999999999999,188" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" />
+<polyline class="class-relationship" data-from="AcademiaService" data-to="Notificador" data-type="dependency" data-marker-at="to" points="153.6,128 153.6,188" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="6 4" marker-end="url(#cls-arrow)" />
+<g class="class-node" data-id="Aluno" data-label="Aluno">
+  <rect x="307.2" y="188" width="121.6" height="128" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="307.2" y="188" width="121.6" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="368" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Aluno</text>
+  <line x1="307.2" y1="220" x2="428.79999999999995" y2="220" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="315.2" y="234" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">int</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">id:</tspan></text>
+  <text x="315.2" y="254" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">str</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">nome:</tspan></text>
+  <text x="315.2" y="274" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">str</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">plano:</tspan></text>
+  <text x="315.2" y="294" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">int</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">checkins:</tspan></text>
+  <line x1="307.2" y1="308" x2="428.79999999999995" y2="308" stroke="var(--_node-stroke)" stroke-width="0.75" />
+</g>
+<g class="class-node" data-id="AlunoRepo" data-label="AlunoRepo">
+  <rect x="468.79999999999995" y="188" width="167.79999999999998" height="108" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="468.79999999999995" y="188" width="167.79999999999998" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="552.6999999999999" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">AlunoRepo</text>
+  <line x1="468.79999999999995" y1="220" x2="636.5999999999999" y2="220" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="468.79999999999995" y1="228" x2="636.5999999999999" y2="228" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="476.79999999999995" y="242" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">salvar(aluno)</tspan></text>
+  <text x="476.79999999999995" y="262" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">buscar_por_nome(nome)</tspan></text>
+  <text x="476.79999999999995" y="282" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">listar()</tspan></text>
+</g>
+<g class="class-node" data-id="Notificador" data-label="Notificador">
+  <rect x="40" y="188" width="227.2" height="68" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="188" width="227.2" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="153.6" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Notificador</text>
+  <line x1="40" y1="220" x2="267.2" y2="220" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="40" y1="228" x2="267.2" y2="228" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="48" y="242" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">enviar(destinatario, mensagem)</tspan></text>
+</g>
+<g class="class-node" data-id="AcademiaService" data-label="AcademiaService">
+  <rect x="108.35" y="40" width="181" height="88" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="108.35" y="40" width="181" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="198.85" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">AcademiaService</text>
+  <line x1="108.35" y1="72" x2="289.35" y2="72" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="108.35" y1="80" x2="289.35" y2="80" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="116.35" y="94" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">matricular(nome, plano)</tspan></text>
+  <text x="116.35" y="114" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">fazer_checkin(nome)</tspan></text>
+</g>
+
+
+
+</svg>
